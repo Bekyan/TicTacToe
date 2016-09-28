@@ -67,8 +67,14 @@ def checkWin(board):
         return (False, "Player 1")
     elif set(d2) == set(['O']):
         return (False, "Player 2")
+    #check for tie
+    tie = False
+    for row in board:
+        if " " in row:
+            break
     else:
-        return None
+            return (False, "none. It's a TIE!")
+    return None
 
 
     
